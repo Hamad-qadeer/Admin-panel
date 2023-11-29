@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import PropTypes from "prop-types";
 import React, { useEffect, useRef } from "react";
 import {
@@ -46,10 +46,10 @@ const Layout = (props: any) => {
     layoutType,
     layoutMode,
     leftSideBarType,
-    showRightSidebar
+    showRightSidebar,
   } = useSelector(selectLayoutProperties);
-  const navigate = navigator.userAgent;
-  const isMobile: any = /iPhone|iPad|iPod|Android/i.test(navigate);
+  // const navigate = navigator.userAgent;
+  // const isMobile: any = /iPhone|iPad|iPod|Android/i.test(navigate);
 
   const toggleMenuCallback = () => {
     if (leftSideBarType === "default") {
@@ -114,7 +114,6 @@ const Layout = (props: any) => {
     }
   }, [leftSideBarType, dispatch]);
 
-
   useEffect(() => {
     if (layoutWidth) {
       dispatch(changeLayoutWidth(layoutWidth));
@@ -163,7 +162,7 @@ const Layout = (props: any) => {
         <Sidebar
           theme={leftSideBarTheme}
           type={leftSideBarType}
-          isMobile={isMobile}
+          isMobile={false}
         />
         <div className="main-content">
           {props.children}

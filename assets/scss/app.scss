@@ -6,7 +6,7 @@ Website: https://themesbrand.com/
 Contact: themesbrand@gmail.com
 File: Main Css File
 */
-
+@import "react-quill/dist/quill.snow.css";
 
 //Fonts
 @import "fonts/fonts";
@@ -66,7 +66,6 @@ File: Main Css File
 @import "plugins/google-map";
 @import "plugins/vector-maps";
 @import "plugins/leaflet-maps";
-
 
 // Pages
 @import "pages/authentication";
